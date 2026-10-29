@@ -2,7 +2,7 @@
 # Чистая установка beeline (линия 15.91, последняя ревизия из этого репозитория) на Ubuntu 22.04/24.04.
 #
 #   Новый сервер, одна команда (скрипт сам клонирует репозиторий):
-#     curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/fresh_install.sh | sudo bash
+#     curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/fresh_install.sh | sudo bash
 #
 #   Переезд со старого сервера (конфиги, clients.txt, прогресс, результаты копируются по SSH):
 #     curl -fsSL <тот же адрес> | sudo MIGRATE_FROM=root@СТАРЫЙ_IP:/opt/beeline bash
@@ -16,13 +16,13 @@
 # symbol_matching.py) плюс local_matcher.py и PROJECT_RULES.md из корня репозитория, заготовки
 # batch_support.py/console_wait.py, конфиги, проверка install.py (без apply), служба systemd, запуск.
 #
-# Служебные переменные: APP_DIR (/opt/beeline), BRANCH (codex/operator-observer-15.87), REPO_URL,
+# Служебные переменные: APP_DIR (/opt/beeline), BRANCH (main), REPO_URL,
 #   SKIP_APT=1, SKIP_VENV=1, NO_SERVICE=1, NO_START=1 (для тестов и повторных запусков).
 set -Eeuo pipefail
 
 APP_DIR="${APP_DIR:-/opt/beeline}"
-BRANCH="${BRANCH:-codex/operator-observer-15.87}"
-REPO_URL="${REPO_URL:-https://github.com/nik236098-dotcom/tess.git}"
+BRANCH="${BRANCH:-main}"
+REPO_URL="${REPO_URL:-https://github.com/germasiks-web/Driver90.git}"
 SERVICE="beeline"
 MIGRATE_FROM="${MIGRATE_FROM:-}"
 

@@ -6,7 +6,7 @@ cd "$APP"
 systemctl stop beeline || true
 cp -a test_beeline.py test_beeline.py.before_1585
 
-curl -fsSL "https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/beeline-15.74-exp3/patches/1585_consolidated.diff?x=$(date +%s)" -o /tmp/1585.diff
+curl -fsSL "https://raw.githubusercontent.com/germasiks-web/Driver90/main/patches/1585_consolidated.diff?x=$(date +%s)" -o /tmp/1585.diff
 patch --forward --batch test_beeline.py /tmp/1585.diff || {
   echo "PATCH FAILED"
   cp -f test_beeline.py.before_1585 test_beeline.py

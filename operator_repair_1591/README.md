@@ -16,7 +16,7 @@ Playwright. Это исправление поиска поля, общий ме
 Обновление выбирает последнюю ревизию установленного варианта full/lite/exp8:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/update.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/update.sh | sudo bash
 ```
 
 ## Новый сервер или переезд одной командой
@@ -30,7 +30,7 @@ preflight `install.py`, служба systemd и запуск. Ubuntu 22.04/24.04
 спросит пароль root старого сервера; бот на старом сервере перед этим остановить):
 
 ```
-curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/fresh_install.sh \
+curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/fresh_install.sh \
   | sudo MIGRATE_FROM=root@СТАРЫЙ_IP:/opt/beeline bash
 ```
 
@@ -40,7 +40,7 @@ curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operato
 `TELEGRAM_CHAT_ID`, `TELEGRAM_PROXY`):
 
 ```
-curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/fresh_install.sh | sudo bash
+curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/fresh_install.sh | sudo bash
 ```
 
 Код всегда берётся из пакета последней ревизии, поэтому старый сервер может быть любой версии.
@@ -79,7 +79,7 @@ PY
 Затем:
 
 ```
-cd /root && git clone -b codex/operator-observer-15.87 https://github.com/nik236098-dotcom/tess.git
+cd /root && git clone -b main https://github.com/germasiks-web/Driver90.git
 cd /root/tess/operator_repair_1591/beeline_integrated_io_15_91_r83
 python3 install.py --app /opt/beeline                      # только проверка, ничего не меняет
 sudo python3 install.py --app /opt/beeline --apply --restart
@@ -365,7 +365,7 @@ sudo python3 install.py --app /opt/beeline --apply --restart
    последний пакет той сборки, что стоит на сервере (lite без маркера `SIGN_ROBUST_1591R31`, иначе полная;
    `BUILD=lite|full` переопределяет), запускает проверку `install.py`, затем `--apply --restart` и
    печатает ревизию и состояние службы. `CHECK=1` — только проверка, `NO_PULL=1` — без git.
-   Без клона на сервере: `curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/update.sh | sudo bash`.
+   Без клона на сервере: `curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/update.sh | sudo bash`.
 
 44. **Тариф заказа до оплаты: `tools/order_tariff.py`.** Ссылка заказа показывает только оплату, а тариф
    виден лишь после неё. Инструмент открывает ссылку (`hash_order=…`, или её хвост, или последние 10 ссылок
@@ -685,11 +685,11 @@ sudo python3 install.py --app /opt/beeline --apply --restart
 78. **Лог состояния сервера `health_log.sh` (для разбора зависаний).** Раз в 5 минут cron дописывает строку в
    `/var/log/beeline-health.log`: нагрузка, память, подкачка, число процессов, Chromium (штук и МБ), Python, размер `/tmp`,
    диск, давление ядра (psi). Работает независимо от бота, поэтому последние строки перед зависанием остаются. Ставится
-   `curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/health_log.sh | sudo bash`,
+   `curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/health_log.sh | sudo bash`,
    смотреть `sudo tail -n 40 /var/log/beeline-health.log`. Лог обрезается до 2000 строк. Бота не трогает.
 
 79. **Проверка связи с Telegram `tg_check.py`.** Если меню и пуши молчат, а в журнале `getUpdates: ConnectionError: SOCKS…`:
-   `curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/tg_check.py -o /tmp/tg_check.py && sudo /opt/beeline/venv/bin/python /tmp/tg_check.py`.
+   `curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/tg_check.py -o /tmp/tg_check.py && sudo /opt/beeline/venv/bin/python /tmp/tg_check.py`.
    Три раза вызывает `getMe` через прокси из `telegram_config.json` и три раза напрямую, говорит, что работает, и при
    необходимости даёт команду переключить на прямое соединение. Токен и логин/пароль прокси не печатает. Ничего не меняет.
    Ещё проходит подключение к прокси по шагам (порт → приветствие SOCKS5 → логин и пароль → соединение с Telegram) и

@@ -4,7 +4,7 @@
 #   sudo bash /root/tess/operator_repair_1591/update.sh
 #
 #   или без клона на сервере (скрипт сам найдёт /root/tess или ~/tess, иначе склонирует в /root/tess):
-#   curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/update.sh | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/update.sh | sudo bash
 #
 # Сборка выбирается как стоит на сервере: lite (без кода подписи r31), если в /opt/beeline/test_beeline.py
 # нет маркера SIGN_ROBUST_1591R31, иначе полная. BUILD=lite или BUILD=full меняют выбор явно.
@@ -23,8 +23,8 @@ set -Eeuo pipefail
 export HOME="${HOME:-/root}"
 
 APP_DIR="${APP_DIR:-/opt/beeline}"
-BRANCH="${BRANCH:-codex/operator-observer-15.87}"
-REPO_URL="${REPO_URL:-https://github.com/nik236098-dotcom/tess.git}"
+BRANCH="${BRANCH:-main}"
+REPO_URL="${REPO_URL:-https://github.com/germasiks-web/Driver90.git}"
 SERVICE="beeline"
 
 say() { printf '\n== %s\n' "$*"; }

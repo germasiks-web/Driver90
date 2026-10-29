@@ -853,12 +853,12 @@ SELF_UPDATE_LOG = "self_update.log"
 SELF_UPDATE_TIMEOUT_SECONDS = 20 * 60
 ALIVE_EVERY_SECONDS = 60
 UPDATE_CHECK_SECONDS = 6 * 3600
-UPDATE_URL = ("https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/"
+UPDATE_URL = ("https://raw.githubusercontent.com/germasiks-web/Driver90/main/"
               "operator_repair_1591/update.sh")
-REPO_API = ("https://api.github.com/repos/nik236098-dotcom/tess/contents/operator_repair_1591"
-            "?ref=codex/operator-observer-15.87")
-LATEST_REVISION_URL = ("https://raw.githubusercontent.com/nik236098-dotcom/tess/"  # VERSION_FALLBACK_1591R90
-                       "codex/operator-observer-15.87/operator_repair_1591/latest_revision.txt")
+REPO_API = ("https://api.github.com/repos/germasiks-web/Driver90/contents/operator_repair_1591"
+            "?ref=main")
+LATEST_REVISION_URL = ("https://raw.githubusercontent.com/germasiks-web/Driver90/"  # VERSION_FALLBACK_1591R90
+                       "main/operator_repair_1591/latest_revision.txt")
 MENU_DROPIN = "/etc/systemd/system/beeline.service.d/zz-menu.conf"
 TARIFF_CHOICES = {
     "watch": ("для смарт часов", {"BEELINE_TARIFF": "для смарт часов", "BEELINE_TARIFF_PRICE": "200", "BEELINE_TARIFF_MINIMAL": "0"}),

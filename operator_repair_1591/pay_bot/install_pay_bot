@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Установка бота оплаты eSIM (pay_bot) одной командой на Ubuntu 22.04/24.04.
 #
-#   curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/pay_bot/install_pay_bot | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/pay_bot/install_pay_bot | sudo bash
 #
 # ОТДЕЛЬНЫЙ бот — у него должен быть СВОЙ токен (другой бот от @BotFather), не токен beeline (иначе 409).
 # Спросит: токен этого бота, chat_id, прокси для Telegram (как у beeline), опционально прокси для страниц оплаты.
@@ -10,8 +10,8 @@ set -Eeuo pipefail
 export HOME="${HOME:-/root}"
 
 APP_DIR="${APP_DIR:-/opt/pay_bot}"
-BRANCH="${BRANCH:-codex/operator-observer-15.87}"
-RAW="https://raw.githubusercontent.com/nik236098-dotcom/tess/${BRANCH}/operator_repair_1591/pay_bot/pay_bot.py"
+BRANCH="${BRANCH:-main}"
+RAW="https://raw.githubusercontent.com/germasiks-web/Driver90/${BRANCH}/operator_repair_1591/pay_bot/pay_bot.py"
 SERVICE="pay_bot"
 BEELINE_VENV="/opt/beeline/venv"
 PW_PATH="${PLAYWRIGHT_BROWSERS_PATH:-/opt/pw-browsers}"

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Установка чат-бота (счётчик QR + DeepSeek + модерация) одной командой на Ubuntu 22.04/24.04.
 #
-#   curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/chat_bot/install_chat_bot | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/chat_bot/install_chat_bot | sudo bash
 #
 # Полностью автономный бот (с beeline не связан). Спросит: токен бота, ключ DeepSeek, прокси.
 # Служебные переменные: TOKEN, DEEPSEEK_API_KEY, PROXY, TRIGGERS, TZ_OFFSET, SKIP_APT=1, NO_SERVICE=1.
@@ -9,8 +9,8 @@ set -Eeuo pipefail
 export HOME="${HOME:-/root}"
 
 APP_DIR="${APP_DIR:-/opt/chat_bot}"
-BRANCH="${BRANCH:-codex/operator-observer-15.87}"
-RAW="https://raw.githubusercontent.com/nik236098-dotcom/tess/${BRANCH}/operator_repair_1591/chat_bot/chat_bot.py"
+BRANCH="${BRANCH:-main}"
+RAW="https://raw.githubusercontent.com/germasiks-web/Driver90/${BRANCH}/operator_repair_1591/chat_bot/chat_bot.py"
 SERVICE="chat_bot"
 
 say() { printf '\n== %s\n' "$*"; }

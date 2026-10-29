@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Установка панели оплат (pay_panel) одной командой на Ubuntu 22.04/24.04.
 #
-#   curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/pay_panel/install_pay_panel | sudo bash
+#   curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/pay_panel/install_pay_panel | sudo bash
 #
 # Многопользовательский бот (админ + оплатчики). Отдельный токен. Спросит: токен, твой Telegram ID,
 # контакт поддержки, прокси для Telegram, ключ DeepSeek. Тянет pay_panel.py и pay_bot.py (движок оплаты).
@@ -10,8 +10,8 @@ set -Eeuo pipefail
 export HOME="${HOME:-/root}"
 
 APP_DIR="${APP_DIR:-/opt/pay_panel}"
-BRANCH="${BRANCH:-codex/operator-observer-15.87}"
-RAW="https://raw.githubusercontent.com/nik236098-dotcom/tess/${BRANCH}/operator_repair_1591"
+BRANCH="${BRANCH:-main}"
+RAW="https://raw.githubusercontent.com/germasiks-web/Driver90/${BRANCH}/operator_repair_1591"
 SERVICE="pay_panel"
 BEELINE_VENV="/opt/beeline/venv"
 PW_PATH="${PLAYWRIGHT_BROWSERS_PATH:-/opt/pw-browsers}"

@@ -35,7 +35,7 @@
 На сервере (Ubuntu). Сам скачает бота, спросит токен, chat_id и прокси Telegram, настроит и запустит службу:
 
 ```
-curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/pay_bot/install_pay_bot | sudo bash
+curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/pay_bot/install_pay_bot | sudo bash
 ```
 
 Спросит по очереди:
@@ -63,7 +63,7 @@ sudo journalctl -u pay_bot -f -o cat
 1. Скачать бота (ветка та же):
 
 ```
-sudo mkdir -p /opt/pay_bot && sudo curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/pay_bot/pay_bot.py -o /opt/pay_bot/pay_bot.py
+sudo mkdir -p /opt/pay_bot && sudo curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/pay_bot/pay_bot.py -o /opt/pay_bot/pay_bot.py
 ```
 
 2. Создать конфиг (подставь свой токен ВТОРОГО бота, chat_id и прокси для Telegram):

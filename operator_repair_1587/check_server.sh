@@ -12,7 +12,7 @@ done
 STAGE="$(mktemp -d /tmp/operator-check-1587.XXXXXXXX)"
 trap 'rm -rf -- "$STAGE"' EXIT
 COMMIT='f080a95f487f6d9e099ec27d1c54f7f007a3a9de'
-RAW="https://raw.githubusercontent.com/nik236098-dotcom/tess/${COMMIT}/operator_repair_1587"
+RAW="https://raw.githubusercontent.com/germasiks-web/Driver90/${COMMIT}/operator_repair_1587"
 for name in operator_reliability.py operator_adapter.py apply_repair.py test_repair.py; do
     curl --proto '=https' --tlsv1.2 -fsSL --connect-timeout 10 --max-time 60 \
         --retry 2 "${RAW}/${name}" -o "${STAGE}/${name}"

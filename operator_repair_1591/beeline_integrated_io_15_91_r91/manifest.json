@@ -217,7 +217,7 @@
       "previous_output_sha256": []
     },
     "telegram_menu.py": {
-      "output_sha256": "6bc67cf5211de1b395f95f59ef7bebec9dbcff875201d6bb208bfc69918cc3a5",
+      "output_sha256": "768b2d00255d596094a6c4869344d6a8dbcda5de46295acd71e6022c1deb3b18",
       "previous_output_sha256": [
         "df2a05d0e19677b69f17352de45d487bff15db10367caca3b0a695d03443e9c6",
         "3364d1483ff6cbe62cbb14091188e09a03b8adc15a78fac39394f1abf945d4e6"

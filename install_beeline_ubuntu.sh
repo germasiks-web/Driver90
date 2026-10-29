@@ -4,7 +4,7 @@ set -Eeuo pipefail
 APP_DIR="/opt/beeline"
 SERVICE="beeline"
 COMMIT="97fe531b9c0728b6b0b5173862748e4d2695a427"
-RAW="https://raw.githubusercontent.com/nik236098-dotcom/tess/${COMMIT}"
+RAW="https://raw.githubusercontent.com/germasiks-web/Driver90/${COMMIT}"
 BUNDLE_URL="${RAW}/beeline_15_74_exp_3tabs_unlimited_ai_github.zip"
 CONTROLLER_URL="${RAW}/server_controller.py"
 PATCH_URL="${RAW}/patch_15_75.py"

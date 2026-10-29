@@ -6,7 +6,7 @@ cd "$APP"
 systemctl stop beeline || true
 cp -a test_beeline.py test_beeline.py.before_1585_semantic
 
-curl -fsSL "https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/beeline-15.74-exp3/update_beeline_15_85.py?x=$(date +%s)" -o /tmp/update_beeline_15_85.py
+curl -fsSL "https://raw.githubusercontent.com/germasiks-web/Driver90/main/update_beeline_15_85.py?x=$(date +%s)" -o /tmp/update_beeline_15_85.py
 
 if ! python3 /tmp/update_beeline_15_85.py; then
   echo "PATCH FAILED -> restoring previous file"

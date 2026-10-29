@@ -11,7 +11,7 @@ status) переиспользуется из `pay_bot.py`. Полное ТЗ �
 Возьми токен нынешнего pay_bot (новый бот создавать не надо) и останови старую службу:
 ```
 sudo systemctl disable --now pay_bot
-curl -fsSL https://raw.githubusercontent.com/nik236098-dotcom/tess/codex/operator-observer-15.87/operator_repair_1591/pay_panel/install_pay_panel | sudo bash
+curl -fsSL https://raw.githubusercontent.com/germasiks-web/Driver90/main/operator_repair_1591/pay_panel/install_pay_panel | sudo bash
 ```
 Спросит: токен, твой Telegram ID (узнать — @userinfobot), контакт поддержки, прокси Telegram, ключ DeepSeek.
 Ставит pay_panel.py + pay_bot.py (движок), venv+Chromium, службу `pay_panel`.
